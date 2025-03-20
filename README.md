@@ -133,4 +133,3 @@ This project was created as an assignment for Flagright. It demonstrates the app
 
 ---
 
-For any questions or issues, please open an issue on this repository or contact the project maintainer directly.
