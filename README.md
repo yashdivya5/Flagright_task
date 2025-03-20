@@ -1,69 +1,139 @@
-# Welcome to your Lovable project
+# Transaction API Dashboard
 
-## Project info
 
-**URL**: https://lovable.dev/projects/392313bf-5e05-4b28-bc56-1c975d085732
+## Project Overview
 
-## How can I edit this code?
+A comprehensive Transaction API for efficient transaction management, built with the MERN stack (MongoDB, Express.js, React, Node.js). This dashboard application allows users to create, search, filter, and analyze transactions through an intuitive interface.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+### Core Functionality
+- **Transaction Management**
+  - Create transactions with detailed information
+  - View transaction details by ID
+  - Search with multiple criteria (User ID, date range, description, tags)
+  - Sort by amount or timestamp
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/392313bf-5e05-4b28-bc56-1c975d085732) and start prompting.
+- **Advanced Analytics**
+  - Generate transaction reports for any period
+  - Visual representation of transaction data
+  - Summary statistics and trend analysis
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Automated Transaction Generation**
+  - Built-in CRON job for test transaction generation
+  - Start/Stop controls directly from the dashboard
 
-**Use your preferred IDE**
+### Technical Features
+- Responsive UI optimized for all devices
+- RESTful API following best practices
+- Efficient pagination system
+- Proper database indexing for optimized queries
+- Support for INR (₹) currency
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Frontend
+- React with TypeScript
+- Tailwind CSS for styling
+- Shadcn UI component library
+- React Query for state management
+- Recharts for data visualization
 
-Follow these steps:
+### Backend
+- Node.js with Express
+- MongoDB for database storage
+- Proper indexes for efficient queries
+- RESTful API design
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### DevOps
+- Docker for containerization and deployment
+- Git for version control
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
+- Node.js (v14 or later)
+- npm or yarn package manager
+- MongoDB (local or Atlas connection)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Installation and Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone <YOUR_REPOSITORY_URL>
+   cd transaction-api-dashboard
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the project root with the following variables:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   PORT=3000
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/transactions | Create a new transaction |
+| GET | /api/transactions/:id | Get transaction by ID |
+| GET | /api/transactions | List transactions (with filter/sort options) |
+| GET | /api/reports | Generate transaction reports |
+| POST | /api/cron/toggle | Toggle the CRON job status |
+
+## Filtering Options
+
+The transaction list can be filtered by:
+- User ID
+- Date range (start and end dates)
+- Description (text search)
+- Tags
+- Status
+- Country
+- Amount range
+
+## Project Structure
+
+```
+transaction-api-dashboard/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── pages/           # Page components
+│   ├── services/        # API services
+│   ├── types/           # TypeScript type definitions
+│   └── App.tsx          # Main application component
+├── .env                 # Environment variables
+├── Dockerfile           # Docker configuration
+├── docker-compose.yml   # Docker Compose configuration
+└── README.md            # Project documentation
 ```
 
-**Edit a file directly in GitHub**
+## License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+[MIT License](LICENSE)
 
-**Use GitHub Codespaces**
+## Acknowledgements
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project was created as an assignment for Flagright. It demonstrates the application of MERN stack development skills for creating a scalable and performant transaction management system.
 
-## What technologies are used for this project?
+---
 
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/392313bf-5e05-4b28-bc56-1c975d085732) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+For any questions or issues, please open an issue on this repository or contact the project maintainer directly.
