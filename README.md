@@ -60,7 +60,7 @@ A comprehensive Transaction API for efficient transaction management, built with
 
 1. **Clone the repository**
    ```bash
-   git clone <YOUR_REPOSITORY_URL>
+   git clone https://github.com/yashdivya5/Flagright_task.git
    cd transaction-api-dashboard
    ```
 
@@ -126,9 +126,6 @@ transaction-api-dashboard/
 └── README.md            # Project documentation
 ```
 
-## License
-
-[MIT License](LICENSE)
 
 ## Acknowledgements
 
